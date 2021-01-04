@@ -1,7 +1,5 @@
 # notebook_golang-docker
 <center>The learning notebook for backend</center>
-
-
 :horse:Learning from Youtube website
 
 URL: https://www.youtube.com/watch?v=rx6CPDK_5mU&list=PLy_6D98if3ULEtXtNSY_2qN21VCKgo 
@@ -19,9 +17,15 @@ URL: https://www.youtube.com/watch?v=rx6CPDK_5mU&list=PLy_6D98if3ULEtXtNSY_2qN21
 * design database
 
 <iframe width="560" height="315" src='https://dbdiagram.io/embed/5fdf056b9a6c525a03bbb950'> </iframe>
-
 docker pull postgres:12-alpine
 
 docker run --name postgres12 -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=secret -d postgres:12-alpine
 
 * Download TablePlus ,Tips: Ctrl+ R to refresh table
+
+3.install migration && scoop
+
+mkdir -p db/migration
+
+migrate create -ext sql -dir db/migration -seq init_schema
+
